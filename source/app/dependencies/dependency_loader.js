@@ -5,6 +5,7 @@ const input_text_1 = require("../input/input_text");
 const twitch_chat_1 = require("../live_chat/twitch_chat");
 const llm_novelai_1 = require("../llm/llm_novelai");
 const llm_openai_1 = require("../llm/llm_openai");
+const llm_groq_1 = require("../llm/llm_groq");
 const tts_novelai_1 = require("../tts/tts_novelai");
 const dependencies_1 = require("./dependencies");
 const input_voice_1 = require("../input/input_voice");
@@ -38,6 +39,11 @@ async function loadDependencies(config) {
         case "characterai":
             {
                 llm = new llm_characterai_1.LargeLanguageModelCharacterAI();
+            }
+            break;
+        case "groq":
+            {
+                llm = new llm_groq_1.LargeLanguageModelGroq();
             }
             break;
         default:
