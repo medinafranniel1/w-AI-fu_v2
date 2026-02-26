@@ -7,7 +7,7 @@ class Auth {
         mail: "",
         password: "",
     };
-    "openai" = {
+    "groq" = {
         token: "",
     };
     "characterai" = {
